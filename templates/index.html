@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Thiên Nhiên Việt Nam</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Khám phá thiên nhiên Việt Nam - các điểm đến hấp dẫn, hình ảnh tuyệt đẹp và gợi ý du lịch sinh thái.">
+  <meta property="og:title" content="Thiên Nhiên Việt Nam">
+  <meta property="og:description" content="Khám phá cảnh sắc thiên nhiên tuyệt đẹp từ Sapa, Phong Nha đến Phú Quốc.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8f0;
+      color: #2c3e50;
+    }
+
+    header {
+      background: linear-gradient(90deg, #56ab2f, #a8e063);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px #2e7d32;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #f0fff0;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    #menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .highlight {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .highlight:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .highlight .info {
+      padding: 1rem;
+    }
+
+    .highlight .info h3 {
+      margin-bottom: 0.5rem;
+      color: #388e3c;
+    }
+
+    .highlight .info p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #4caf50;
+        padding: 1rem;
+        border-radius: 8px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+      }
+
+      nav ul.open {
+        display: flex;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+    }
+	{
+      color: #2c3e50;
+    }
+
+    header {
+      background: linear-gradient(90deg, #56ab2f, #a8e063);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 3px #2e7d32;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #f0fff0;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 1.5rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .highlight {
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .highlight:hover {
+      transform: translateY(-5px);
+    }
+
+    .highlight img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .highlight .info {
+      padding: 1rem;
+    }
+
+    .highlight .info h3 {
+      margin-bottom: 0.5rem;
+      color: #388e3c;
+    }
+
+    .highlight .info p {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Thiên Nhiên Việt Nam</div>
+    <nav role="navigation" aria-label="Thanh điều hướng chính">
+      <button id="menu-toggle">☰</button>
+      <ul>
+        <li><a href="index.html">Trang Chủ</a></li>
+        <li><a href="places.html">Địa Điểm</a></li>
+        <li><a href="contact.html">Liên Hệ</a></li>
+        <li><a href="#gallery">Bộ Sưu Tập</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="intro">
+      <h2>Khám Phá Vẻ Đẹp Thiên Nhiên Việt Nam</h2>
+      <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">
+        Giới thiệu về du lịch Việt Nam
+Việt Nam là một quốc gia nằm ở Đông Nam Á, sở hữu đường bờ biển dài hơn 3.200 km, địa hình đa dạng từ núi rừng đến đồng bằng và biển đảo, cùng nền văn hóa lâu đời, ẩm thực đặc sắc và con người hiếu khách. Những yếu tố này đã góp phần làm cho Việt Nam trở thành một trong những điểm đến du lịch hấp dẫn nhất châu Á.
+
+🌟 Những yếu tố khiến Việt Nam thu hút khách du lịch
+1. 🏞️ Thiên nhiên phong phú và đa dạng
+Vịnh Hạ Long – kỳ quan thiên nhiên thế giới.
+
+Sapa, Đà Lạt – khí hậu mát mẻ, cảnh quan núi rừng.
+
+Phú Quốc, Nha Trang, Đà Nẵng – biển xanh, cát trắng, nắng vàng.
+
+Hang Sơn Đoòng – hang động lớn nhất thế giới tại Quảng Bình.
+
+2. 🏯 Di sản văn hóa và lịch sử đặc sắc
+Phố cổ Hội An, Cố đô Huế, Thánh địa Mỹ Sơn – được UNESCO công nhận.
+
+Nhiều di tích, chùa chiền, đình làng cổ kính gắn liền với lịch sử ngàn năm.
+
+Lễ hội truyền thống như Tết Nguyên Đán, lễ hội chùa Hương, hội Lim...
+
+3. 🍜 Ẩm thực đa dạng và hấp dẫn
+Phở, bún chả, bánh mì – nổi tiếng toàn cầu.
+
+Ẩm thực vùng miền phong phú: bún bò Huế, cơm tấm Sài Gòn, nem nướng Nha Trang, chè Huế...
+
+Đồ ăn đường phố rẻ, ngon, dễ tiếp cận.
+
+4. 👨‍👩‍👧‍👦 Con người thân thiện, hiếu khách
+Người Việt Nam luôn sẵn sàng giúp đỡ, niềm nở với du khách.
+
+Trải nghiệm homestay, văn hóa bản địa rất được yêu thích.
+
+5. 💵 Chi phí du lịch hợp lý
+So với nhiều quốc gia khác, chi phí ăn ở, đi lại và tham quan tại Việt Nam tương đối rẻ.
+
+Nhiều lựa chọn từ bình dân đến cao cấp, phù hợp với mọi đối tượng du khách.
+
+6. 🛫 Cơ sở hạ tầng và dịch vụ du lịch ngày càng phát triển
+Sân bay quốc tế tại nhiều thành phố lớn: Hà Nội, TP.HCM, Đà Nẵng, Phú Quốc.
+
+Nhiều khách sạn, resort, tour du lịch chuyên nghiệp được đầu tư bài bản.
+
+Chính sách visa linh hoạt, hỗ trợ khách quốc tế.
+
+
+      </p>
+    </section>
+
+    <section id="gallery">
+      <h2>Thư Viện Ảnh Thiên Nhiên</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Rừng và núi vào sáng sớm" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Cảnh thiên nhiên núi đá vôi" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Thung lũng xanh mát" loading="lazy">
+        <img src="https://cms.junglebosstours.com/assets/2c74649f-1ce7-49c8-a757-c98d275285e6?width=1202&height=802" alt="Phong nha kẻ bàng" loading="lazy">
+        <img src="https://thanhnienmoi.com/upload/images/canh-dong-lua-chin-o-ha-giang-01.jpg" alt="Cánh đồng bậc thang" loading="lazy">
+		<img src="https://special.nhandan.vn/30-nam-mot-chang-duong-di-san-Vinh-Ha-Long/assets/HLCklusX0n/things-to-do-in-ha-long-bay-banner-1-1920x1080.jpg" alt="Hạ Long" loading="lazy">
+		<img src="https://baovemoitruong.org.vn/wp-content/uploads/2023/06/da-lat-1-n.jpg" alt="Đà Lạt" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYlE6T1LqOJ2J4Ztd5c9CWFzwYND8iFBFcw&s" alt="Khánh hòa" loading="lazy">
+		<img src="https://www.icisequynhon.com/wp-content/uploads/2020/05/quynhon-binhdinh.jpg" alt="Quy Nhơn" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFRWw4MMYwLZ5S3PdxaTFbUkGEVAKxXkF16g&s" alt="Đà Nẵng" loading="lazy">
+		<img src="https://file3.qdnd.vn/data/images/0/2023/03/28/tranthaiphuong/dulich10.jpg?dpi=150&quality=100&w=870" alt="Núi Bà đen" loading="lazy">
+		<img src="https://mia.vn/media/uploads/blog-du-lich/dia-diem-du-lich-viet-nam-2-1721209508.jpg" alt="Hà Nội" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3x1VAnUXS12B2BZMhKGZ2-bgEMlL6Y84Itw&s" alt="Bà Nà" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWCyPcY0ftFslAlX9e4N5f-ijU-Eh6T4jE_w&s" alt="Hoàng Hôn" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPbUQEtchxVuutXDjLdrQAZoPOvjUnrB2KDw&s" alt="Thác Nước" loading="lazy">
+		<img src="https://goldenlife.vn/wp-content/uploads/2024/12/Ha-Giang-Cot-Co-Lung-Cu.jpg" alt="Hà Giang" loading="lazy">
+		<img src="https://media2.gody.vn/public/mytravelmap/images/2018/6/1/knigh.gody/2b70d1e0e5f1dc83ebb17b6c5c49e6d0.jpg" alt="Kinh Thành" loading="lazy">
+		<img src="https://www.seaplanes.vn/blog/wp-content/uploads/2017/05/HCM-vietnam.jpg" alt="Nhà Thờ" loading="lazy">
+		<img src="https://cdn.tgdd.vn/Files/2023/11/03/1553919/du-lich-nhon-trach-dong-nai-5-dia-diem-khong-the-bo-qua-202311031111194043.jpg" alt="Nhơn Trạch" loading="lazy">
+		<img src="https://cdn.tgdd.vn/Files/2021/06/18/1361241/18-dia-diem-du-lich-mien-tay-song-nuoc-vo-cung-ly-thu-hap-dan-202203281042182831.jpg" alt="Mũi Cà Mau" loading="lazy">
+		<img src="https://1phutsaigon.vn/wp-content/uploads/2024/07/sai-gon.jpg" alt="Sài Gòn" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzb8sLliLdtS7WRwyhY9505wk2jwMWbDu-fw&s" alt="Hang Động" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_GiJfCiq0uzirFmJJ92EADIXaL4eOxN207w&s" alt="Núi Sông" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwBHwhe68rTN55bTTgm3Exdcs52hOU-0vMjA&s" alt="Bình minh" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQj6GAr2SbiZisvfiEJZXpjuBWogScWsiYOrQ&s" alt="Đảo du lịch" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZZs69DmfTkHdlDFFKrDsKq3yqalivC3f73Q&s" alt="Sông nước miền Tây" loading="lazy">
+		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRg0Q43Z6cwL4xw4Dpr1VTYwXIkRRVfQLaKw&s" alt="Cáp treo" loading="lazy">
+		<img src="https://statics.vinwonders.com/dao-phu-quoc_1661246610.jpg" alt="Phú Quốc" loading="lazy">
+      </div>
+    </section>
+
+    <section id="suggestions">
+      <h2>Gợi Ý Điểm Đến Thu Hút</h2>
+      <div class="highlights">
+        <div class="highlight">
+          <img src="https://cdn3.ivivu.com/2023/10/du-lich-Da-Lat-ivivu.jpg" alt="Đà Lạt" loading="lazy">
+          <div class="info">
+            <h3>Giới thiệu về Đà Lạt - Điểm đến du lịch tuyệt vời ở vùng cao nguyên Lâm Đồng Việt Nam</h3>
+            <p>Đà Lạt là thành phố thuộc tỉnh Lâm Đồng, nằm trên cao nguyên Lang Biang, ở độ cao khoảng 1.500 mét so với mực nước biển. Nhờ địa hình cao nguyên, Đà Lạt có khí hậu mát mẻ quanh năm, được mệnh danh là “Thành phố ngàn hoa”, “Thành phố sương mù” hoặc “Tiểu Paris” của Việt Nam.</p>
+          </div>
+        </div>
+        <div class="highlight">
+          <img src="https://tapchimoitruong.vn/Lists/Articles/Attachments/47576/sa%20pa.jpg" alt="SaPa" loading="lazy">
+          <div class="info">
+            <h3>Giới thiệu về Sa Pa – Điểm đến du lịch tuyệt vời ở vùng Tây Bắc Việt Nam</h3>
+            <p>Sa Pa là một thị trấn vùng cao thuộc tỉnh Lào Cai, nằm ở độ cao khoảng 1.500–1.600 mét so với mực nước biển. Với khí hậu mát mẻ quanh năm, cảnh quan thiên nhiên hùng vĩ và bản sắc văn hóa dân tộc độc đáo, Sa Pa luôn là một trong những điểm đến hấp dẫn nhất ở Việt Nam, thu hút hàng triệu du khách trong và ngoài nước mỗi năm.</p>
+          </div>
+        </div>
+        <div class="highlight">
+          <img src="https://tqe.vn/upload/user/images/CAM%20NANG%20DU%20LICH%20PHU%20QUOC/1.jpg" alt="Bãi biển Phú Quốc" loading="lazy">
+          <div class="info">
+            <h3>Giới thiệu về Phú Quốc – Điểm đến du lịch tuyệt vời ở Tỉnh Kiên Giang</h3>
+            <p>Phú Quốc là hòn đảo lớn nhất Việt Nam, thuộc tỉnh Kiên Giang, nằm trong vịnh Thái Lan. Với vẻ đẹp hoang sơ, khí hậu ấm áp quanh năm và làn nước biển trong xanh, Phú Quốc được mệnh danh là “Đảo Ngọc” của Việt Nam. Nơi đây không chỉ nổi tiếng với bãi biển tuyệt đẹp mà còn là điểm đến nghỉ dưỡng đẳng cấp quốc tế.</p>
+          </div>
+        </div> 
+      </div>
+	  
+    </section>
+
+  </main>
+
+
+  <script>
+    document.getElementById("menu-toggle").onclick = function () {
+      document.querySelector("nav ul").classList.toggle("open");
+    };
+  </script>
+
+</body>
+
+
+	
+
+
+
+
+
+  <footer>
+    &copy; 2025 Thiên Nhiên Việt Nam. Mọi quyền được bảo lưu.
+  </footer>
+
+</html>
+	  <!DOCTYPE html>

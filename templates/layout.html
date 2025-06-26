@@ -1,0 +1,29 @@
+<!DOCTYPE html><!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Thiên Nhiên Việt Nam{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+  <header>
+    <div class="logo">Thiên Nhiên Việt Nam</div>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Trang Chủ</a></li>
+        <li><a href="{{ url_for('places') }}">Địa Điểm</a></li>
+        <li><a href="{{ url_for('contact') }}">Liên Hệ</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    &copy; 2025 Thiên Nhiên Việt Nam
+  </footer>
+</body>
+</html>
