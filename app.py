@@ -6,14 +6,6 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return render_template("index.html")
-
 @app.route("/places")
 def places():
     # Danh sách địa điểm, mỗi phần tử là dict chứa ảnh, tên, mô tả
@@ -30,6 +22,9 @@ def places():
         {"image": "new_place2.jpg", "title": "Địa điểm mới 2", "desc": "Mô tả địa điểm mới 2."}
     ]
     return render_template("places.html", places=places_data)
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

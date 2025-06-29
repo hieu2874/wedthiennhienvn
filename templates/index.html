@@ -295,18 +295,44 @@
         gap: 0.5rem;
       }
     }
+	body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f3fdf5;
+      color: #2d3748;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #2f855a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      text-align: justify;
+    }
+
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">Thiên Nhiên Việt Nam</div>
+     <div class="logo">🌿 Thiên Nhiên Việt Nam</div>
     <nav role="navigation" aria-label="Thanh điều hướng chính">
       <button id="menu-toggle">☰</button>
       <ul>
-        <li><a href="index.html">Trang Chủ</a></li>
-        <li><a href="places.html">Địa Điểm</a></li>
-        <li><a href="contact.html">Liên Hệ</a></li>
+        <li><a href="{{ url_for('home') }}">Trang Chủ</a></li>
+        <li><a href="{{ url_for('places') }}">Địa Điểm</a></li>
+        <li><a href="{{ url_for('contact') }}">Liên Hệ</a></li>
         <li><a href="#gallery">Bộ Sưu Tập</a></li>
       </ul>
     </nav>

@@ -3,44 +3,37 @@
 {% block title %}Địa Điểm Thiên Nhiên Việt Nam{% endblock %}
 
 {% block content %}
-  <h2>Những Địa Điểm Thiên Nhiên Bạn Nên Đến Thử Một Lần</h2>
-  <div class="places-container">
+  <h2 class="page-title">Những Địa Điểm Thiên Nhiên Bạn Nên Đến Thử Một Lần</h2>
+  <div class="places-grid">
+ 
+
+ 
 
     <div class="place-card">
-      <img src="{{ url_for('static', filename='images/halong.jpg') }}" alt="Vịnh Hạ Long">
-      <h3>Vịnh Hạ Long (Quảng Ninh)</h3>
-      <p>Kỳ quan thiên nhiên thế giới với hàng nghìn đảo đá vôi và hang động kỳ ảo giữa làn nước biển trong xanh.</p>
-    </div>
-
-    <div class="place-card">
-      <img src="{{ url_for('static', filename='images/sapa.jpg') }}" alt="Sa Pa">
+       <img src="https://tapchimoitruong.vn/Lists/Articles/Attachments/47576/sa%20pa.jpg" alt="SaPa" loading="lazy">
       <h3>Sa Pa (Lào Cai)</h3>
       <p>Thị trấn mờ sương nằm giữa núi rừng Tây Bắc với ruộng bậc thang, bản làng và đỉnh Fansipan.</p>
     </div>
 
     <div class="place-card">
-      <img src="{{ url_for('static', filename='images/phongnha.jpg') }}" alt="Phong Nha - Kẻ Bàng">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzb8sLliLdtS7WRwyhY9505wk2jwMWbDu-fw&s" alt="Phong Nha Kẻ Bàng" loading="lazy">
       <h3>Phong Nha - Kẻ Bàng (Quảng Bình)</h3>
       <p>Di sản thiên nhiên thế giới với hệ thống hang động kỳ vĩ, nổi bật là hang Sơn Đoòng – lớn nhất thế giới.</p>
     </div>
 
     <div class="place-card">
-      <img src="{{ url_for('static', filename='images/phuquoc.jpg') }}" alt="Phú Quốc">
+      <img src="https://tqe.vn/upload/user/images/CAM%20NANG%20DU%20LICH%20PHU%20QUOC/1.jpg" alt="Bãi biển Phú Quốc" loading="lazy">
       <h3>Phú Quốc (Kiên Giang)</h3>
       <p>Hòn đảo ngọc với biển xanh cát trắng, rừng nguyên sinh và các khu bảo tồn sinh thái đa dạng.</p>
     </div>
 
     <div class="place-card">
-      <img src="{{ url_for('static', filename='images/baoloc.jpg') }}" alt="Bảo Lộc">
-      <h3>Bảo Lộc (Lâm Đồng)</h3>
+      <img src="https://baovemoitruong.org.vn/wp-content/uploads/2023/06/da-lat-1-n.jpg" alt="Đà Lạt" loading="lazy">
+      <h3>Đà lạt (Lâm Đồng)</h3>
       <p>Thành phố nhỏ yên bình với đồi chè, thác nước và khí hậu mát mẻ quanh năm.</p>
     </div>
 
-    <div class="place-card">
-      <img src="{{ url_for('static', filename='images/trangan.jpg') }}" alt="Tràng An">
-      <h3>Tràng An (Ninh Bình)</h3>
-      <p>Quần thể danh thắng với sông núi thơ mộng, di sản văn hóa và thiên nhiên thế giới.</p>
-    </div>
+   
 
   </div>
 {% endblock %}

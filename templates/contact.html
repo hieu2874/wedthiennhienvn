@@ -3,17 +3,19 @@
 {% block title %}Liên Hệ{% endblock %}
 
 {% block content %}
-  <h2>Liên hệ với chúng tôi</h2>
-  <form>
-    <label>Họ và tên:</label>
-    <input type="text" name="name" required><br>
+  <h2 class="contact-title">Liên hệ với chúng tôi</h2>
+  <div class="contact-container">
+    <form class="contact-form">
+      <label>Họ và tên:</label>
+      <input type="text" name="name" required>
 
-    <label>Email:</label>
-    <input type="email" name="email" required><br>
+      <label>Email:</label>
+      <input type="email" name="email" required>
 
-    <label>Nội dung:</label>
-    <textarea name="message" rows="5" required></textarea><br>
+      <label>Nội dung:</label>
+      <textarea name="message" rows="5" required></textarea>
 
-    <button type="submit">Gửi</button>
-  </form>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
 {% endblock %}
