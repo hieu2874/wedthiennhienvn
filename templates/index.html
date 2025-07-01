@@ -472,7 +472,11 @@ Chính sách visa linh hoạt, hỗ trợ khách quốc tế.
 
 
   <footer>
-  &copy; 2025 Thiên Nhiên Việt Nam. By {{ admin.name }} - {{ admin.sdt }}
+ {% if admin is defined %}
+  {{ admin.name }} - {{ admin.sdt }}
+{% else %}
+  By Hồ Bi
+{% endif %}
 </footer>
 
 </html>

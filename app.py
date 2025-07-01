@@ -4,7 +4,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html")
+    admin = {
+        "name": "Hồ Bi",
+        "sdt": "09xxxxxxxx"  # Thay bằng số thật nếu muốn
+    }
+    return render_template("index.html", admin=admin)
 
 @app.route("/places")
 def places():
